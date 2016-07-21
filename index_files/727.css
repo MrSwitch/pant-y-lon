@@ -1,0 +1,343 @@
+/**
+ * Default CSS document 
+ * Standardizes browser defaults
+ * Sets a simple page display
+ * 
+ * @author Andrew Dodson
+ * @since 2009-05
+ */
+
+
+
+/********************************
+ * Defaults
+ ********************************/
+body{
+	margin:0;
+	font-family:arial;
+	text-align:center;
+	background-color:#F5F5F5;
+	font-size:12px;
+background:url(/style/graphic/56.png) no-repeat #F5F5F5 fixed;
+}
+
+img{
+	border:1px solid #f4f4f4;
+	margin:1px;
+	padding:3px
+}
+
+table{
+	border-collapse:collapse;
+	empty-cells:show;
+}
+
+h1{
+	font-size:16px;
+	margin-top:30px;
+}
+h2{
+	font-size:15px;
+}
+
+a{
+	color:#075E8F;
+	text-decoration:none;
+}
+
+	a:hover{
+		color:#993300;
+		text-decoration:underline;
+	}
+
+
+ul.inline li{
+	display:inline;
+	padding:5px 6px;
+	margin:0;
+	border-left:1px solid #ddd;
+}
+
+
+/********************************
+ * #CONTAINER
+ ********************************/
+ 
+#container{
+	margin:-4px auto;
+	text-align:justify;
+	width:742px;
+	padding:2px 35px;
+	background:url(/style/graphic/52.gif) repeat-y;
+}
+	/********************************
+	 * #CONTAINER-TOP
+	 ********************************/
+
+	#container-top{
+
+		display:none;
+		padding:20px 0;
+	}
+		#container-logo{
+			font-size:40px;
+			color:beige;
+			font-weight:bold;
+			font-family:trebuchet MS;
+		}
+		#container-login{
+			font-size:11px;
+			margin-left:520px;
+			position:absolute;
+			top:0;
+		}
+
+	/********************************
+	 * #TABS
+	 ********************************/
+
+	#container-tabs ul{
+		margin:10px 0;
+		padding:0;
+	}
+
+		#container-tabs li{
+			display:inline;
+			margin:5px 0;
+			font-size:0.9em;
+			padding:0 10px;
+			border-left:1px solid #ddd;
+		}
+			#container-tabs li.first-child{
+				border-left:0;
+			}
+
+	
+	/********************************
+	 * #CRUMBS
+	 ********************************/
+	#crumbs{
+		border:1px solid #ccc;
+		text-align:left;
+		font-size:0.9em;
+		padding:5px;
+		width:auto;
+	}
+		#crumbs ul{
+			display:inline;
+			margin:0;
+			padding:0;
+		}
+			#crumbs ul li{
+				display:inline;
+				padding:0 5px 0 15px;
+				background:url(../graphic/30_g_li.gif) no-repeat left center;
+			}
+	
+
+	#container-inner {
+		clear:both;
+		text-align:justify;
+		height:100%;
+	}
+		
+		#main-content{
+			float:right;
+			width:70%;
+		}
+		div.columns1 #main-content{
+			float:right;
+			width:100%;
+		}
+		
+		div.side-menu.column1{
+			width:25%;
+			float:left;
+		}
+
+	#container-foot{
+		clear:both;
+		margin: 4px auto;
+		padding-top:10px;
+		font-size:0.9em;
+	}
+		#container-foot ul{
+			padding:0;
+			margin:10px 0;
+		}
+			#container-foot ul li{
+				display:inline;
+				padding:5px 6px;
+				margin:0;
+				border-left:1px solid #ddd;
+			}
+				#container-foot ul li a{
+					color:gray;
+				}
+	
+
+
+
+
+/********************************
+ * FORM
+ ********************************/
+
+form{
+	margin:0;
+	padding:0;
+}
+	form textarea{
+		  width:300px;
+		  font-size:11px;
+	}
+	
+	/********************************
+	 * TEXTAREA.EDITOR
+	 ********************************/
+	form textarea.editor
+	,form iframe.editor
+	,form div.editor{
+		display:block;
+		width:100%;
+		height:300px;
+		padding:0;
+		border: 1px solid lightgrey;
+	}
+	
+	form div.toolbar{
+		padding:2px 0;
+		width:100%;
+		background:#f8f8f8;
+		border:1px solid lightgrey;
+		border-bottom:0;
+		font-size:11px;
+	}
+		form div.toolbar span.tool{
+			display:inline-block;
+		}
+		form div.toolbar button{
+			font-size:inherit;
+			border:0;
+			border-right:1px solid lightgray;
+			background-color:#f8f8f8;
+			padding:1px 2px;
+			margin-right:-1px;
+		}
+		form div.toolbar button:focus{
+			background:white;
+		}
+		form div.toolbar button:hover
+		,div.toolbar button.selected{
+			background:lightgrey;
+		}
+		form div.toolbar button[disabled]:hover{
+			background:none;
+		}
+		form div.toolbar select{
+			font-size:inherit;
+			border:1px solid lightgrey;
+		}
+		form div.toolbar button[disabled]
+		,form div.toolbar select[disabled]
+		,form div.toolbar span.tool[disabled]
+		,form div.toolbar button[disabled] b{
+			color:#dddddd;
+		}
+	
+	/**
+	 * onchange alert error
+	 */
+	form div.alert_form{
+		padding-left:20px;
+		position:absolute;
+		display:inline;
+		height:13px;
+		background:url(../graphic/26_ok.gif) no-repeat 5px center white;
+	}
+		form div.alert_form.ok{
+			background-image:url(../graphic/26_ok.gif);
+		}
+		form div.alert_form.neg{
+			background-image:url(../graphic/27_neg.gif);
+		}
+		form div.alert_form.indicator{
+			background-image:url(../graphic/28_indicator.gif);
+		}
+
+
+	/**
+	 * Form table structure
+	 */
+	form table tbody th{
+		font-weight:normal;
+		width:20%;
+	}
+
+
+
+
+/****************************
+ * HTML_TABLE
+ * Used to wrap and decorate a table
+ * This is used to mimic the more desirable and simple CSS
+ * --moz-border-radius
+ * --
+ * USED:
+ * 		Encompass FORM content
+ *		On the html
+ ****************************/
+
+.html_table{
+	width:100%;
+	border:0;
+}
+	/**
+	 * Style Section divide
+	 */
+	.html_table tr.section th{
+		padding:5px;
+		font-size:11px;
+		font-weight:bold;
+	}
+
+/********************************
+ * .LIST or .DATASET
+ * 
+ ********************************/
+
+div.list{
+}
+
+	div.list div.depth_1{
+		border:1px solid lightgrey;
+		height:80px;
+		padding:5px;
+		background:white;
+	}
+	div.list div.depth_1.odd{
+		background:#f4f4f4;
+	}
+
+
+/********************************
+ * Handy positioning
+ ********************************/
+
+div.fourquarter{width:74%;}
+div.twothirds{width:66%;}
+div.half{width:49%;}
+div.third{width:33%;}
+div.quarter{width:24%;}
+
+div.left{float:left;}
+div.right{float:right;}
+
+
+
+/********************************
+ * #KNARLY-LINK
+ ********************************/
+#knarly-link{
+	display:none;
+}
